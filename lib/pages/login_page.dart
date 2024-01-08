@@ -191,7 +191,7 @@ class _LoginPageState extends State<LoginPage> {
             
                     // apple button
                     SquareTile(
-                        onTap: (){},
+                        onTap: () => AuthService().signInWithApple(),
                         imagePath: 'lib/images/apple.png',
                     )
                   ],

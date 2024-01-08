@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pg_finder/components/widget_support.dart';
 import 'package:pg_finder/pages/detail_page.dart';
@@ -6,6 +7,10 @@ import 'package:pg_finder/pages/detail_page.dart';
 class HomePage extends StatelessWidget {
    HomePage({super.key});
 
+
+   void signUserOut(){
+     FirebaseAuth.instance.signOut();
+   }
 
 
   @override
@@ -16,8 +21,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Hi Raj,",
-                style: AppWidget.HeadlineTextFieldStyle()
+            Row(
+              children: [
+                Text("Hi Raj,",
+                    style: AppWidget.HeadlineTextFieldStyle()
+                ),
+                IconButton(onPressed: signUserOut, icon: Icon(Icons.logout)
+                ),
+              ],
             ),
             SizedBox(height: 20.0,),
 
@@ -26,18 +37,17 @@ class HomePage extends StatelessWidget {
             ),
 
             SizedBox(height: 20.0,),
-            Container(
-              height: 50,
-              width: 270,
-              decoration: BoxDecoration(
-                color: Color(hexColor('#eafaff')),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  Text(),
+            Row(
+              children: [
+                Container(
+                  height: 50,
+                  width: 270,
+                  decoration: BoxDecoration(
+                    color: Color(hexColor('#eafaff')),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
-              ),
+              ],
             ),
 
             SizedBox(height: 20.0,),

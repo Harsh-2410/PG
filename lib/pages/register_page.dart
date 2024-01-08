@@ -173,7 +173,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                     // apple button
                     SquareTile(
-                      onTap: (){},
+                      onTap: () => AuthService().signInWithApple(),
                       imagePath: 'lib/images/apple.png',
                     ),
                   ],
