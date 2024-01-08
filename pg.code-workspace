@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "pg"
+		},
+		{
+			"path": "android"
+		},
+		{
+			"path": "build"
+		},
+		{
+			"path": "fonts"
+		},
+		{
+			"path": "ios"
+		},
+		{
+			"path": "lib"
+		},
+		{
+			"path": "test"
+		},
+		{
+			"path": ".dart_tool"
+		},
+		{
+			"path": ".idea"
+		}
+	],
+	"settings": {}
+}
