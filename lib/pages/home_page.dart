@@ -8,6 +8,8 @@ class HomePage extends StatelessWidget {
    HomePage({super.key});
 
 
+   final searchController = TextEditingController();
+
    void signUserOut(){
      FirebaseAuth.instance.signOut();
    }
@@ -46,6 +48,17 @@ class HomePage extends StatelessWidget {
                     color: Color(hexColor('#eafaff')),
                     borderRadius: BorderRadius.circular(15),
                   ),
+                ),
+
+                SizedBox(width: 20.0,),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Color(hexColor('#eafaff')),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Icon(Icons.search_rounded, color: Color(hexColor('#3787DD')), size: 45, ),
                 ),
               ],
             ),
@@ -127,7 +140,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 30.0,),
+            SizedBox(height: 5.0,),
+            Text("Recommended", style: AppWidget.boldTextFieldStyle(),),
+            SizedBox(height: 5.0,),
 
             Container(
               margin: EdgeInsets.only(right: 10.0,),

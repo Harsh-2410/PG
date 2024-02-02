@@ -45,8 +45,8 @@ class _BottomNavState extends State<BottomNav> {
         color: Color(hexColor('#eafaff')),
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 15.0,
-            vertical: 20.0,
+            horizontal: 12.0,
+            vertical: 8.0,
           ),
           child: GNav(
             backgroundColor: Color(hexColor('#eafaff')),
